@@ -18,19 +18,74 @@
 </head>
   <body>
 
-    Order Summary
+    <header class="sr-only">
+      <h1 tabindex="0">
+        Here is your order summary
+      </h1>
+    </header>
 
-    You can now listen to millions of songs, audiobooks, and podcasts on any
-    device anywhere you like!
+    <main class="card">
 
-    Annual Plan
-    $59.99/year
+      <section class="hero">
+        <img
+          class="hero__img"
+          src="images/illustration-hero.svg"
+          alt="illustration of girl dancing to music"
+        >
+      </section>
 
-    Change
+      <section class="summary flex column alignItems-center">
 
-    Proceed to Payment
-    Cancel Order
+        <div class="summary__textWrap">
+          <h2 class="textAlign-center">Order Summary</h2>
 
+          <p class="textAlign-center">
+            You can now listen to millions of songs, audiobooks, and podcasts on any
+            device anywhere you like!
+          </p>
+        </div>
+
+        <div class="plan__info flex alignItems-center">
+          <img
+            src="images/icon-music.svg"
+            alt="music symbol icon"
+            class="plan__info__icon"
+          >
+
+          <div class="plan__info__plan flex column">
+            <h3 class="plan__info__plan-type">
+              Annual Plan
+            </h3>
+            <div class="plan__info__plan-price">
+              $59.99/year
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="plan__info__link-change"
+          >
+            Change
+          </a>
+        </div>
+
+        <a
+          href="#"
+          class="pay__link-btn flex"
+        >
+          <span>Proceed to Payment</span>
+        </a>
+
+        <a
+          href="#"
+          class="cancel__link"
+        >
+          Cancel Order
+        </a>
+
+      </section>
+
+    </main>
 
 
     <footer class="attribution">

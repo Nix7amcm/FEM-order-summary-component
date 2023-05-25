@@ -11,10 +11,6 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
 img,
 svg {
   display: block;
@@ -26,13 +22,18 @@ body {
   place-items: center;
   align-content: center;
   min-height: 100vh;
+  padding-top: 1rem;
   font-family: var(--ff-p);
   font-size: var(--fs-p);
-  background: var(--bg-body);
+  background: url('images/pattern-background-desktop.svg'), var(--pale-blue);
+  background-repeat: no-repeat;
 }
 
-@media (max-width: 952px) {
-  body {}
+@media (max-width: 375px) {
+  body {
+    background: url('images/pattern-background-mobile.svg'), var(--pale-blue);
+    background-repeat: no-repeat;
+  }
 }
 
 
@@ -52,10 +53,206 @@ body {
 }
 
 
+/*_____ TYPOGRAPHY _____*/
+
+h2 {
+  margin-bottom: 1.0625rem;
+  color: var(--fc-h2);
+  font-family: var(--ff-h2);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-h2);
+  line-height: var(--lh-h2);
+}
+
+h3.plan__info__plan-type {
+  margin-bottom: .375rem;
+  color: var(--fc-h3);
+  font-family: var(--ff-h3);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-h3);
+  line-height: var(--lh-h3);
+}
+
+p {
+  color: var(--fc-p);
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+  font-weight: var(--fw-p);
+  line-height: var(--lh-p);
+}
+
+.plan__info__plan-price {
+  color: var(--fc-price);
+  font-family: var(--ff-price);
+  font-size: var(--fs-price);
+  font-weight: var(--fw-price);
+  line-height: var(--lh-price);
+}
+
+.plan__info__link-change {
+  color: var(--fc-change);
+  font-family: var(--ff-change);
+  font-size: var(--fs-change);
+  font-weight: var(--fw-change);
+  line-height: var(--lh-change);
+}
+
+.plan__info__link-change:is(:hover, :focus-visible) {
+  color: var(--fc-change-hov);
+  text-decoration: none;
+}
+
+.pay__link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22.125rem;
+  height: 3.125rem;
+  margin-block: 2rem;
+  color: var(--fc-btn);
+  font-family: var(--ff-btn);
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-btn);
+  line-height: var(--lh-btn);
+  background-color: var(--bg-btn);
+  box-shadow: var(--bxs-btn);
+  border-radius: var(--bdrs-btn);
+  text-decoration: none;
+}
+
+.pay__link-btn:is(:hover, :focus-visible) {
+  background-color: var(--bg-btn-hov);
+}
+
+.cancel__link {
+  margin-bottom: 3rem;
+  color: var(--fc-cancel);
+  font-family: var(--ff-cancel);
+  font-size: var(--fs-cancel);
+  font-weight: var(--fw-cancel);
+  line-height: var(--lh-cancel);
+  text-decoration: none;
+}
+
+.cancel__link:is(:hover, :focus-visible) {
+  color: var(--fc-cancel-hov);
+}
+
+@media (max-width: 952px) {
+  h2 {
+    margin-bottom: 1rem;
+    font-size: var(--fs-h2-mob);
+    line-height: var(--lh-h2-mob);
+  }
+
+  h3.plan__info__plan-type {
+    margin-bottom: .1875rem;
+    font-size: var(--fs-h3-mob);
+    line-height: var(--lh-h3-mob);
+  }
+
+  p {
+    font-size: var(--fs-p-mob);
+    line-height: var(--lh-p-mob);
+  }
+
+  .plan__info__plan-price {
+    font-size: var(--fs-price-mob);
+    line-height: var(--lh-price-mob);
+  }
+
+  .plan__info__link-change {
+    font-size: var(--fs-change-mob);
+    line-height: var(--lh-change-mob);
+  }
+
+  .cancel__link {
+    margin-bottom: 2rem;
+    font-size: var(--fs-cancel-mob);
+    line-height: var(--lh-cancel-mob);
+  }
+
+  .pay__link-btn {
+    width: 17.4375rem;
+    margin-block: 1.5rem;
+  }
+}
+
+
+/*_____ CLASSES _____*/
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.alignItems-center {
+  align-items: center;
+}
+
+.textAlign-center {
+  text-align: center;
+}
+
+
+/*_____ LAYOUT _____*/
+
+.card {
+  max-width: 28.125rem;
+  margin-bottom: 2rem;
+  background-color: var(--bg-card);
+  border-radius: var(--bdrs-card);
+  box-shadow: var(--bxs-card);
+  overflow: hidden;
+}
+
+.summary__textWrap {
+  max-width: 22.125rem;
+  margin-block: 2.8125rem 1.25rem;
+  margin-inline: 3rem;
+}
+
+.plan__info {
+  width: 22.125rem;
+  height: 6.125rem;
+  padding-inline: 1.5rem;
+  background-color: var(--bg-plan-info);
+}
+
+.plan__info__plan {
+  margin-inline: 1.25rem 5.875rem;
+}
+
+@media (max-width: 952px) {
+  .card {
+    max-width: 20.4375rem;
+  }
+
+  .summary__textWrap {
+    max-width: 16.4375rem;
+    margin-block: 2rem 1.5rem;
+    margin-inline: 2rem;
+  }
+
+  .plan__info {
+    width: 17.4375rem;
+    height: 5.0625rem;
+    padding-inline: 1rem;
+  }
+
+  .plan__info__plan {
+    margin-inline: 1.25rem 3.125rem;
+  }
+}
 
 
 /*_____ FOOTER _____*/
-footer p {
+
+
+footer {
   color: var(--fc-footer);
   font-size: var(--fs-footer);
   text-align: center;
