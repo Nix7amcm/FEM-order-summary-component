@@ -1,0 +1,75 @@
+/*_____ GLOBAL STYLES _____*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+  background: var(--bg-body);
+}
+
+@media (max-width: 952px) {
+  body {}
+}
+
+
+/*_____ HEADER-H1-HIDDEN _____*/
+
+.sr-only {
+  /*@ https://tailwindcss.com/docs/screen-readers#screen-reader-only-elements */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+
+
+/*_____ FOOTER _____*/
+footer p {
+  color: var(--fc-footer);
+  font-size: var(--fs-footer);
+  text-align: center;
+}
+
+footer a {
+  color: var(--fc-footer-a);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--fc-footer-a-hov);
+}
+
+footer a:visited {
+  color: var(--fc-footer-a-vis);
+}

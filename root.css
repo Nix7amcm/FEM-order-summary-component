@@ -1,0 +1,11 @@
+:root {
+
+
+
+  --fc-footer: hsl(212, 21%, 14%);
+  --fc-footer-a: hsl(180, 100%, 27%);
+  --fc-footer-a-hov: hsl(39, 100%, 50%);
+  --fc-footer-a-vis: hsl(300, 100%, 25%);
+  --fs-footer: .6875rem;
+
+}
